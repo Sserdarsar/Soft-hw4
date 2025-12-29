@@ -19,9 +19,10 @@ public class NumberRange {
         int min = Math.min(start, end);
         int max = Math.max(start, end);
         
-        System.out.println("Numbers between " + min + " and " + max + ":");
+        System.out.println("Odd numbers between " + min + " and " + max + ":");
         for (int i = min + 1; i < max; i++) {
-            System.out.println(i);
+            if (i % 2 != 0) {
+                System.out.println(i);
+            }
         }
     }
-}
