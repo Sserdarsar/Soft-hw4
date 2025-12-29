@@ -19,10 +19,11 @@ public class NumberRange {
         int min = Math.min(start, end);
         int max = Math.max(start, end);
         
-        System.out.println("Odd numbers between " + min + " and " + max + ":");
+        System.out.println("Even numbers between " + min + " and " + max + ":");
         for (int i = min + 1; i < max; i++) {
-            if (i % 2 != 0) {
+            if (i % 2 == 0) {
                 System.out.println(i);
             }
         }
     }
+}
