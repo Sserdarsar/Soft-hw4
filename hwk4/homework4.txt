@@ -1,0 +1,69 @@
+SOFT2101 HW4 - Git Exercise Answers
+===================================
+
+STEP A: Git Config Commands
+---------------------------
+git config --global user.name "Ahmet Serdar Sari"
+git config --global user.email "serdar.sari45@gmail.com"
+git config --global core.editor "notepad"
+git config --list
+
+STEP B: Files in .git directory
+-------------------------------
+git clone https://github.com/Sserdarsar/Soft-hw4.git
+dir -Force
+dir .git
+
+Files/directories in .git:
+- hooks/
+- info/
+- logs/
+- objects/
+- refs/
+- config
+- description
+- HEAD
+- index
+- packed-refs
+
+STEP C: Markdown Link Format
+----------------------------
+[Isik University Software Engineering](https://www.isikun.edu.tr/akademik/muhendislik-fakultesi/bolumler-ve-programlar/bilgisayar-muhendisligi/programlar/lisans-programi/yazilim-muhendisligi)
+
+STEP D: .gitignore Rules
+------------------------
+*.class
+*.jar, *.war, *.ear
+.idea/, *.iml, .vscode/
+bin/, out/, target/, build/
+.DS_Store, Thumbs.db
+*.log
+
+STEP F: Commits on feature-1 branch
+-----------------------------------
+git log --oneline
+25791f3 satisfying requirement one
+5f3cd01 setting up gitignore
+ac28be3 homework4.txt
+
+Files in hmk1 on feature-1: homework4.txt, NumberRange.java
+Files in hmk1 on main (before merge): (directory did not exist)
+
+STEP J: Commits on feature-2 branch
+-----------------------------------
+bd818e7 satisfying requirement change two
+25791f3 satisfying requirement one
+5f3cd01 setting up gitignore
+
+STEP M: Differences between main and other branches
+---------------------------------------------------
+git diff main feature-1
+- feature-1 prints ALL numbers in range
+- main prints only EVEN numbers
+
+git diff main feature-2
+- feature-2 prints only ODD numbers (i % 2 != 0)
+- main prints only EVEN numbers (i % 2 == 0)
+
+git diff main feature-3
+- Nearly identical (only end-of-file difference)
